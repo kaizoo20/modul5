@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeri Foto Alumni UNIKU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border: 2px solid #ddd;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .modal img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background-color: red;
+      color: white;
+      font-size: 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .close:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeri Foto Alumni UNIKU</h1>
+
+  <div class="gallery">
+    <img src="alumni1.jpg" alt="Foto Alumni 1">
+    <img src="alumni2.jpg" alt="Foto Alumni 2">
+    <img src="alumni3.jpg" alt="Foto Alumni 3">
+    <img src="alumni4.jpg" alt="Foto Alumni 4">
+  </div>
+
+  <div class="modal" id="imageModal">
+    <div class="modal-content">
+      <button class="close">&times;</button>
+      <img src="" alt="Foto Modal" id="modalImage">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="gas.js"></script>
+</body>
+</html>
